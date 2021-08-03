@@ -4,14 +4,22 @@
  * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
  */
 
-var darkSwitch = document.getElementById("darkSwitch");
+// ================== COMMIT BY ZUBAIR MOOSANI ================== //
+// var darkSwitch = document.getElementById("darkSwitch");
+
+// ================== BY DEFAULT FUNCTION ================== //
+// window.addEventListener("load", function () {
+//   if (darkSwitch) {
+//     initTheme();
+//     darkSwitch.addEventListener("change", function () {
+//       resetTheme();
+//     });
+//   }
+// });
+
+// ================== FUNCTION EDIT BY ZUBAIR MOOSANI ================== //
 window.addEventListener("load", function () {
-  if (darkSwitch) {
     initTheme();
-    darkSwitch.addEventListener("change", function () {
-      resetTheme();
-    });
-  }
 });
 
 /**
@@ -25,15 +33,22 @@ window.addEventListener("load", function () {
  * 'data-theme' attribute will not be set.
  * @return {void}
  */
+// ================== BY DEFAULT FUNCTION ================== //
+// function initTheme() {
+//   var darkThemeSelected =
+//     localStorage.getItem("darkSwitch") !== null &&
+//     localStorage.getItem("darkSwitch") === "dark";
+//   darkSwitch.checked = darkThemeSelected;
+//   darkThemeSelected
+//     ? document.body.setAttribute("data-theme", "dark")
+//     : document.body.removeAttribute("data-theme");
+// }
+
+// ================== FUNCTION EDIT BY ZUBAIR MOOSANI ================== //
 function initTheme() {
-  var darkThemeSelected =
-    localStorage.getItem("darkSwitch") !== null &&
-    localStorage.getItem("darkSwitch") === "dark";
-  darkSwitch.checked = darkThemeSelected;
-  darkThemeSelected
-    ? document.body.setAttribute("data-theme", "dark")
-    : document.body.removeAttribute("data-theme");
+     document.body.setAttribute("data-theme", "dark")
 }
+
 
 /**
  * Summary: resetTheme checks if the switch is 'on' or 'off' and if it is toggled
@@ -41,12 +56,19 @@ function initTheme() {
  * applied.
  * @return {void}
  */
+// ================== BY DEFAULT FUNCTION ================== //
+// function resetTheme() {
+//   if (darkSwitch.checked) {
+//     document.body.setAttribute("data-theme", "dark");
+//     localStorage.setItem("darkSwitch", "dark");
+//   } else {
+//     document.body.removeAttribute("data-theme");
+//     localStorage.removeItem("darkSwitch");
+//   }
+// }
+
+// ================== FUNCTION EDIT BY ZUBAIR MOOSANI ================== //
 function resetTheme() {
-  if (darkSwitch.checked) {
     document.body.setAttribute("data-theme", "dark");
     localStorage.setItem("darkSwitch", "dark");
-  } else {
-    document.body.removeAttribute("data-theme");
-    localStorage.removeItem("darkSwitch");
-  }
 }
