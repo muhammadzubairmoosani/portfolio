@@ -1,3 +1,21 @@
+.darkMode .item {
+  height: 50px;
+  -webkit-transition: .4s;
+  transition: .4s;
+  position: relative;
+}
+
+.darkMode .item_height {
+  height: 187px;
+}
+
+.wrapper {
+  bottom: 25px;
+  position: absolute;
+  right: 0;
+  left: 0;
+}
+
 .wrapper .switch {
   position: absolute;
   left: 50%;
@@ -53,7 +71,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #e74a42;
+  background-color: #66cb8c;
   -webkit-transition: all 1.4s;
   transition: all 1.4s;
   border-radius: 50px;
@@ -135,8 +153,8 @@
 
 .wrapper .switch .sky {
   position: absolute;
-  left: -40%;
-  top: -150px;
+  left: -50%;
+  top: -115px;
   width: 100px;
   height: 100px;
   -webkit-transform: scale(0);
@@ -315,7 +333,7 @@
 
 .wrapper .switch .boat .bottom:after {
   content: "";
-  width: 50px;
+  width: 36px;
   border-top: 4px solid #000;
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
