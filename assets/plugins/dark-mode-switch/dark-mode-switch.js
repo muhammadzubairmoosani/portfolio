@@ -4,23 +4,23 @@
  * Licensed under MIT (https://github.com/coliff/dark-mode-switch/blob/main/LICENSE)
  */
 
-// ================== COMMIT BY ZUBAIR MOOSANI ================== //
-// var darkSwitch = document.getElementById("darkSwitch");
+// ================== BY DEFAULT ================== //
+var darkSwitch = document.getElementById("darkSwitch");
 
 // ================== BY DEFAULT FUNCTION ================== //
-// window.addEventListener("load", function () {
-//   if (darkSwitch) {
-//     initTheme();
-//     darkSwitch.addEventListener("change", function () {
-//       resetTheme();
-//     });
-//   }
-// });
+window.addEventListener("load", function () {
+  if (darkSwitch) {
+    initTheme();
+    darkSwitch.addEventListener("change", function () {
+      resetTheme();
+    });
+  }
+});
 
 // ================== FUNCTION EDIT BY ZUBAIR MOOSANI ================== //
-window.addEventListener("load", function () {
-    initTheme();
-});
+// window.addEventListener("load", function () {
+//     initTheme();
+// });
 
 /**
  * Summary: function that adds or removes the attribute 'data-theme' depending if
@@ -34,20 +34,20 @@ window.addEventListener("load", function () {
  * @return {void}
  */
 // ================== BY DEFAULT FUNCTION ================== //
-// function initTheme() {
-//   var darkThemeSelected =
-//     localStorage.getItem("darkSwitch") !== null &&
-//     localStorage.getItem("darkSwitch") === "dark";
-//   darkSwitch.checked = darkThemeSelected;
-//   darkThemeSelected
-//     ? document.body.setAttribute("data-theme", "dark")
-//     : document.body.removeAttribute("data-theme");
-// }
+function initTheme() {
+  var darkThemeSelected =
+    localStorage.getItem("darkSwitch") !== null &&
+    localStorage.getItem("darkSwitch") === "dark";
+  darkSwitch.checked = darkThemeSelected;
+  darkThemeSelected
+    ? document.body.setAttribute("data-theme", "dark")
+    : document.body.removeAttribute("data-theme");
+}
 
 // ================== FUNCTION EDIT BY ZUBAIR MOOSANI ================== //
-function initTheme() {
-     document.body.setAttribute("data-theme", "dark")
-}
+// function initTheme() {
+//      document.body.setAttribute("data-theme", "dark")
+// }
 
 
 /**
@@ -57,18 +57,18 @@ function initTheme() {
  * @return {void}
  */
 // ================== BY DEFAULT FUNCTION ================== //
-// function resetTheme() {
-//   if (darkSwitch.checked) {
-//     document.body.setAttribute("data-theme", "dark");
-//     localStorage.setItem("darkSwitch", "dark");
-//   } else {
-//     document.body.removeAttribute("data-theme");
-//     localStorage.removeItem("darkSwitch");
-//   }
-// }
-
-// ================== FUNCTION EDIT BY ZUBAIR MOOSANI ================== //
 function resetTheme() {
+  if (darkSwitch.checked) {
     document.body.setAttribute("data-theme", "dark");
     localStorage.setItem("darkSwitch", "dark");
+  } else {
+    document.body.removeAttribute("data-theme");
+    localStorage.removeItem("darkSwitch");
+  }
 }
+
+// ================== FUNCTION EDIT BY ZUBAIR MOOSANI ================== //
+// function resetTheme() {
+//     document.body.setAttribute("data-theme", "dark");
+//     localStorage.setItem("darkSwitch", "dark");
+// }
