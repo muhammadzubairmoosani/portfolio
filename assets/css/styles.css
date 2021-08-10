@@ -1218,7 +1218,7 @@ body[data-theme="dark"] .text-muted {
   position: absolute;
 }
 
-svg {
+#svg_img {
   display: none;
 }
 
