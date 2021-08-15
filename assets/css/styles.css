@@ -239,6 +239,13 @@ a.dotted-link:hover {
   opacity: 0.8;
 }
 
+.project_container{
+  max-height: 500px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-bottom: 1.5rem;
+}
+
 .latest .divider {
   margin-bottom: 60px;
 }
