@@ -50,12 +50,18 @@ GitHubActivity.feed({ username: "muhammadzubairmoosani", selector: "#ghfeed" });
 
 /* NIGHT MODE CONTENT HEIGHT CONTROL FUNCTIONALITY */
 const element = document.getElementById("dark_mode_item")
+const dark_mode_container = document.getElementById("dark_mode")
+
 
 function addClass() {
 	const mode = localStorage.getItem("darkSwitch")
-	mode === 'dark'
-		? element.classList.add('item_height')
-		: element.classList.remove('item_height');
+	if (mode === 'dark') {
+		element.classList.add('item_height');
+		dark_mode_container.classList.remove('dark_mode_unActive');
+	} else {
+		element.classList.remove('item_height');
+		dark_mode_container.classList.add('dark_mode_unActive');
+	}
 }
 addClass()
 
