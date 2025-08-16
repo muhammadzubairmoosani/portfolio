@@ -66,12 +66,12 @@ const rss = new RSS(
 rss.render();
 
 /* Github Calendar - https://github.com/IonicaBizau/github-calendar */
-new GitHubCalendar("#github-graph", "muhammadzubairmoosani", {
+new GitHubCalendar("#github-graph", "zubairmoosani", {
   responsive: true,
 });
 
 /* Github Activity Feed - https://github.com/caseyscarborough/github-activity */
-GitHubActivity.feed({ username: "muhammadzubairmoosani", selector: "#ghfeed" });
+GitHubActivity.feed({ username: "zubairmoosani", selector: "#ghfeed" });
 
 /* NIGHT MODE CONTENT HEIGHT CONTROL FUNCTIONALITY */
 const element = document.getElementById("dark_mode_item");
